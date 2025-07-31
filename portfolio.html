@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Komal Upadhyay | Portfolio</title>
+  <style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+header {
+  background: #1e1e2f;
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3rem;
+}
+
+header p {
+  margin: 10px 0 20px;
+  font-size: 1.2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 25px;
+  background: #ff4b5c;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #e63946;
+}
+.skills{
+  text-align: center;
+  margin-top: 50px ; 
+}
+
+section {
+  padding: 60px 0;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  
+  background: white;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+footer {
+  background: #1e1e2f;
+  color: #fff;
+  text-align: center;
+  padding: 30px 0;
+}
+.card img
+ { height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+</style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>Komal Upadhyay</h1>
+      <p>UI/UX Designer | Frontend Developer</p>
+      <a href="#portfolio" class="btn">View My Work</a>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>Hi, I'm Komal – a passionate Frontend Developer and a student, eager to create clean and responsive websites. I enjoy turning ideas into user-friendly web experiences using HTML , CSS, and JavaScript. Currently learning and growing my skills to build impactful projects. </p>
+    </div>
+  </section>
+<section id="skills">
+  <div class="container">
+    <h2>Skills Acquired</h2>
+    <ul class="skills-list">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JAVASCRIPT</li>
+      <li>C++</li>
+      <li>REACT</li>
+      <li>JAVA</li>
+    </ul>
+  </div>
+</section>
+  <section id="portfolio">
+    <div class="container">
+      <h2>My Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Fast Foodies</h3>
+          <img src="food.jpg" alt="ab">
+          <p>Fast Foodies is a dynamic and visually appealing website deigned to showcase a wide range of fast food items.The project highlights various menu categories,details about each dish and aims to attract food lovers with its appetizing interface. </p>
+        </div>
+        <div class="card">
+          <h3>New Job Portals</h3>
+          <img src="job.jpg" alt="cd">
+          <p>It's a modern web-based platform designed to connect job seekers with employeers effeciently.The portal features job listing, search filters, user registration, resume uploads and employer dashboards. It's a simple and user-friendly interface.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>Email me at: <a href="mailto:komalupad02@gmail.com">komalupad02@gmail.com</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Komal . All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

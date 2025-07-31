@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Brandify - Creative Launchpad</title>
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: 'Poppins', sans-serif;
+      background: #f8f9fc;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    body {
+      color: #333;
+    }
+
+    nav {
+      background-color: #ffffff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #6c63ff;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #6c63ff;
+    }
+
+    header {
+      position: relative;
+      background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+      color: white;
+      text-align: center;
+      padding: 100px 20px 150px;
+      overflow: hidden;
+    }
+
+    .plane {
+      position: absolute;
+      width: 80px;
+      top: 30px;
+      left: -100px;
+      animation: flyplane 12s linear infinite;
+    }
+
+    @keyframes flyplane {
+      0% { transform: translateX(-100px) rotate(10deg); }
+      50% { transform: translateX(110vw) rotate(0deg); }
+      100% { transform: translateX(-100px) rotate(-5deg); }
+    }
+
+    header h1 {
+      font-size: 3.2rem;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: #eee;
+    }
+
+    header button {
+      background-color: #fff;
+      color: #6c63ff;
+      border: none;
+      padding: 12px 25px;
+      font-weight: bold;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.4s;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+      margin-bottom: 20px;
+    }
+
+    header button:hover {
+      background-color: #6c63ff;
+      color: white;
+    }
+    .cta-email{
+      gap: 30px;
+      display:flex; 
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+
+    .hero-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .hero-text {
+      max-width: 500px;
+      text-align: left;
+    }
+
+    .hero-image {
+      width: 300px;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+      animation: fadeInUp 1.5s ease;
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .section {
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 25px;
+      color: #6c63ff;
+    }
+
+    .features, .why-choose, .team {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .card {
+      background-color: white;
+      padding: 25px;
+      border-radius: 16px;
+      width: 280px;
+      box-shadow: 0 8px 24px rgba(108, 99, 255, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(108, 99, 255, 0.3);
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #444;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .cta-email {
+      background: linear-gradient(to right, #6c63ff, #c27ffc);
+      color: white;
+      padding: 60px 20px;
+    }
+
+    .cta-email h2 {
+      margin-bottom: 20px;
+    }
+
+    .cta-email input[type="email"] {
+      padding: 12px 20px;
+      border: none;
+      border-radius: 25px;
+      width: 250px;
+      margin-right: 10px;
+    }
+
+    .cta-email button {
+      padding: 12px 20px;
+      border: none;
+      background: white;
+      color: #6c63ff;
+      font-weight: bold;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      background-color: #f0f0f0;
+    }
+
+    @media (max-width: 768px) {
+      .features, .why-choose, .team {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      header h1 {
+        font-size: 2.4rem;
+      }
+
+      .cta-email input[type="email"] {
+        width: 80%;
+        margin-bottom: 10px;
+      }
+
+      .hero-content {
+        flex-direction: column;
+      }
+
+      .hero-text {
+        text-align: center;
+      }
+    }
+    .my-photo{
+      
+      height: 250px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo"><h1>🌈Brandify</h1></div>
+    
+    <div>
+      <a href="#features">Features</a>
+      <a href="#why">Why Us</a>
+      <a href="#team">Team</a>
+    </div>
+  </nav>
+
+  <header>
+    
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Welcome to <span style="color:#ff7d66;">Brandify</span></h1>
+        <p>Your creative launchpad for ideas, startups & digital excellence.</p>
+        <br>
+        <button>Start for Free</button><br>
+        <h1>Hey there, It's me. How's all going?</h1>
+      </div>
+       
+        
+      <img id="my-photo" src="photo.JPG" alt="my-photo">
+    </div>
+  </header>
+
+  <section id="features" class="section">
+    <h2>🚀 Features</h2>
+    <div class="features">
+      <div class="card">
+        <h3>⚡ Fast Performance</h3>
+        <p>Lightning-speed loading across devices and platforms.</p>
+      </div>
+      <div class="card">
+        <h3>🎨 Stunning Design</h3>
+        <p>Clean, modern UI that makes your brand shine.</p>
+      </div>
+      <div class="card">
+        <h3>🔒 Rock-Solid Security</h3>
+        <p>Enterprise-grade protection for your data and users.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="why" class="section">
+    <h2>💡 Why Choose Us?</h2>
+    <div class="why-choose">
+      <div class="card">
+        <h3>🚀 Startup Ready</h3>
+        <p>Perfect for MVPs, pitch decks, and product launches.</p>
+      </div>
+      <div class="card">
+        <h3>🤝 Support That Cares</h3>
+        <p>24/7 expert help to guide you from start to scale.</p>
+      </div>
+      <div class="card">
+        <h3>🌍 Global Reach</h3>
+        <p>Optimized to go live anywhere your users are.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="team" class="section">
+    <h2>👨‍💻 Meet Our Team</h2>
+    <div class="team">
+      <div class="card">
+        <h3>Komal Upadhyay</h3>
+        <p>UI/UX Designer & Visionary behind Brandify</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-email">
+    <h2>📩 Stay Updated!</h2>
+    <p>Sign up to get the latest news, updates, and features.</p>
+    <input type="email" placeholder="Your Email Address" />
+    <button>Subscribe</button>
+  </section>
+
+  <footer>
+    &copy; 2025 Brandify. All rights reserved.
+  </footer>
+
+</body>
+</html>
